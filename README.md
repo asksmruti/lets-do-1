@@ -1,8 +1,8 @@
 # Let's do - Part:1
 
-Sample code can be reffered and used as a basic building block to 
+Sample code can be reffered and used as a basic building block to
 
-* To provision AWS infrastructure by using terraform
+* Provision AWS infrastructure by using terraform
 * CI/CD with declarative pipe-line on Jenkins and 
 * Deploy the code on remote server 
 
