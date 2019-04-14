@@ -18,7 +18,7 @@ The keys can be used in more secure ways by implementing different mechanisms. H
 
 The `remote-exec` will execute  `tools.sh` file on the Jenkins server which resides on public network. This script will install openjdk-8, git ,maven and provison standalone Jenkins.
 
-Second activity:
+##### Second activity:
 
 Since the infrastructure and Jenkins(on public subnet) are ready to be used,let's configure Jenkins server with user, install the required plugins. 
 
