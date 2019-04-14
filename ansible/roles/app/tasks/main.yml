@@ -1,0 +1,25 @@
+---
+- name: Install Java 1.8
+  apt: name=openjdk-8-jdk
+
+- name: add group "app"
+  group: name=app
+
+- name: add user "app"
+  user: name=app group=app home=/app createhome=no
+  become: True
+  become_method: sudo
+
+- name: Deploy JAR 
+  copy: 
+    src: "{{ artifact_path }}/"
+    dest: /app
+    owner: app
+    group: app
+    mode: 0755
+
+- name: run app
+  shell: 'nohup java -jar /app/{{ app_name }} &'
+
+- name: wait for application to start
+  wait_for: port={{http_port}}

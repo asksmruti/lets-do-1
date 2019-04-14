@@ -1,0 +1,9 @@
+---
+- hosts: app-servers
+  remote_user: root
+  become: yes
+  become_method: sudo
+  gather_facts: no
+
+  roles:  
+    - app
